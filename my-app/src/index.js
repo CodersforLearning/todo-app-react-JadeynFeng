@@ -6,12 +6,22 @@ class Add extends React.Component {
   render() {
     return(
       <div className='AddList'>
-        <input type="text" id="addlist" placeholder='add to list'></input>
-        <span onclick="addNew()" class="add">Add!</span>
+        <input type="text" id="addlist" placeholder='add to list' /*oninput=""*/></input>
+        <button onclick="addNew()" className="add">Add!</button>
       </div>
     );
   }
 }
+
+/**
+class Todo extends React.Component {
+  render() {
+    return(
+
+    );
+  }
+}
+*/
 
 class List extends React.Component {
 
@@ -19,15 +29,18 @@ class List extends React.Component {
     super(props);
     this.state = {
       tdlist: ["Buy Milk", "Play BotW"],
+      current: "",
     };
   }
   
+  /**
   addNew() {
     const newtdlist = this.state.tdlist;
     this.setState({
       tdlist: newtdlist,
     });
   }
+  */
 
   render() {
     const todolist = this.state.tdlist.map(x => {
